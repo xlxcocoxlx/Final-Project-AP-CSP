@@ -7,7 +7,7 @@ pygame.mixer.set_num_channels(50)
 
 font = pygame.font.Font('assets/Terserah.ttf', 48)
 medium_font = pygame.font.Font('assets/Terserah.ttf', 28)
-small_font = pygame.font.Font('assets/Terserah.ttf', 16)
+small_font = pygame.font.Font('assets/DancingScript.ttf', 16)
 real_small_font = pygame.font.Font('assets/Terserah.ttf', 10)
 fps = 60
 timer = pygame.time.Clock()
@@ -34,7 +34,7 @@ for i in range(len(white_notes)):
 for i in range(len(black_notes)):
     black_sounds.append(mixer.Sound(f'assets\\notes\\{black_notes[i]}.wav'))
 
-pygame.display.set_caption("Pete's Python Piano")
+pygame.display.set_caption("Python Piano")
 
 
 def draw_piano(whites, blacks):
