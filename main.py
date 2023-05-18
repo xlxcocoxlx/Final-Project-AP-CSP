@@ -8,7 +8,7 @@ pygame.mixer.set_num_channels(50)
 font = pygame.font.Font('assets/Terserah.ttf', 48)
 medium_font = pygame.font.Font('assets/Terserah.ttf', 28)
 small_font = pygame.font.Font('assets/DancingScript.ttf', 16)
-real_small_font = pygame.font.Font('assets/Terserah.ttf', 10)
+real_small_font = pygame.font.Font('assets/DancingScript.ttf', 10)
 fps = 60
 timer = pygame.time.Clock()
 WIDTH = 52 * 35
@@ -141,10 +141,10 @@ def draw_title_bar():
     screen.blit(instruction_text, (WIDTH - 500, 10))
     instruction_text2 = medium_font.render('Left/Right Arrows Change Right Hand', True, 'black')
     screen.blit(instruction_text2, (WIDTH - 500, 50))
-    title_text = font.render('Python Programmable Piano!', True, 'white')
-    screen.blit(title_text, (298, 18))
-    title_text = font.render('Python Programmable Piano!', True, 'black')
-    screen.blit(title_text, (300, 20))
+    title_text = font.render('Python Piano!', True, 'white')
+    screen.blit(title_text, (498, 18))
+    title_text = font.render('Python Piano!', True, 'black')
+    screen.blit(title_text, (500, 20))
 
 
 run = True
