@@ -21,12 +21,12 @@ activeBlacks = []
 leftOct = 4
 rightOct = 5
 
-leftHand = pl.left_hand
-rightHand = pl.right_hand
-pianoNotes = pl.piano_notes
-whiteNotes = pl.white_notes
-blackNotes = pl.black_notes
-blackLabels = pl.black_labels
+leftHand = pl.leftHand
+rightHand = pl.rightHand
+pianoNotes = pl.pianoNotes
+whiteNotes = pl.whiteNotes
+blackNotes = pl.blackNotes
+blackLabels = pl.blackLabels
 
 for i in range(len(whiteNotes)):
     whiteSounds.append(mixer.Sound(f'assets\\notes\\{whiteNotes[i]}.wav'))
