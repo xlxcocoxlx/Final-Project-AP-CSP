@@ -22,7 +22,6 @@ activeWhites = []
 activeBlacks = []
 leftOct = 4
 rightOct = 5
-
 leftHand = pl.leftHand
 rightHand = pl.rightHand
 pianoNotes = pl.pianoNotes
