@@ -83,7 +83,7 @@ def drawPiano(whites, blacks):
 
 def drawHands(rightOct, leftOct, rightHand, leftHand):
     # left hand
-    pygame.draw.rect(screen, "dark gray", [(leftOct * 245) - 175, HEIGHT - 60, 245, 30], 0, 4)
+    pygame.draw.rect(screen, "dark green", [(leftOct * 245) - 175, HEIGHT - 60, 245, 30], 0, 4)
     pygame.draw.rect(screen, "black", [(leftOct * 245) - 175, HEIGHT - 60, 245, 30], 4, 4)
     text = smallFont.render(leftHand[0], True, "white")
     screen.blit(text, ((leftOct * 245) - 165, HEIGHT - 55))
@@ -110,7 +110,7 @@ def drawHands(rightOct, leftOct, rightHand, leftHand):
     text = smallFont.render(leftHand[10], True, "black")
     screen.blit(text, ((leftOct * 245) + 27, HEIGHT - 55))
     # right hand
-    pygame.draw.rect(screen, "dark gray", [(rightOct * 245) - 175, HEIGHT - 60, 245, 30], 0, 4)
+    pygame.draw.rect(screen, "dark green", [(rightOct * 245) - 175, HEIGHT - 60, 245, 30], 0, 4)
     pygame.draw.rect(screen, "black", [(rightOct * 245) - 175, HEIGHT - 60, 245, 30], 4, 4)
     text = smallFont.render(rightHand[0], True, "white")
     screen.blit(text, ((rightOct * 245) - 165, HEIGHT - 55))
@@ -139,9 +139,9 @@ def drawHands(rightOct, leftOct, rightHand, leftHand):
 
 
 def drawTitleBar():
-    instructionText = mediumFont.render("Up/Down Arrows Change Left Hand", True, "black")
+    instructionText = mediumFont.render("Left/Right Arrows Change Left Hand", True, "black")
     screen.blit(instructionText, (WIDTH - 500, 10))
-    instructionText2 = mediumFont.render("Left/Right Arrows Change Right Hand", True, "black")
+    instructionText2 = mediumFont.render("Up/Down Arrows Change Right Hand", True, "black")
     screen.blit(instructionText2, (WIDTH - 500, 50))
     titleText = font.render("Python Piano!", True, "white")
     screen.blit(titleText, (498, 18))
@@ -216,16 +216,16 @@ while run:
                     activeWhites.append([index, 30])
 
         if event.type == pygame.KEYDOWN:
-            if event.key == pygame.K_RIGHT:
+            if event.key == pygame.K_UP:
                 if rightOct < 8:
                     rightOct += 1
-            if event.key == pygame.K_LEFT:
+            if event.key == pygame.K_DOWN:
                 if rightOct > 0:
                     rightOct -= 1
-            if event.key == pygame.K_UP:
+            if event.key == pygame.K_RIGHT:
                 if leftOct < 8:
                     leftOct += 1
-            if event.key == pygame.K_DOWN:
+            if event.key == pygame.K_LEFT:
                 if leftOct > 0:
                     leftOct -= 1
 
